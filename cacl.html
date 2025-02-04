@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+          body  {margin: 0px;
+         background-color: rgb(205, 205, 205);
+        }
+
+  div{width: fit-content;}
+  
+
+  .container{display: flex;
+            flex-direction: column;
+            position: relative;
+            left:29%;
+            top: 50px;
+            overflow: hidden;
+           
+            border-top-left-radius: 35px;
+            margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        background-image: url('image_870x_6589628f73475.jpg');
+            }    
+
+    .top{
+        display: flex;
+        flex-direction: row;
+        margin-top: 2px;
+        margin-left:9px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column; 
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+    }
+     .row{
+        display: flex;
+        flex-direction: row;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+     }
+
+    .display{
+             width: 510px;
+             height: 100px;
+             background-color: white;
+            align-items:end;
+          display: flex;flex-direction:column-reverse;
+          border-radius: 5px;
+          border-top-left-radius: 35px;
+          margin-bottom: 7px;
+          margin-top: 10px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+    }
+    .display-1{font-size: 38px;
+               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              padding-right: 10px;
+              padding-top: 10px;
+              height: 40px;
+              font-weight:lighter;
+              border-radius: 5px;
+              margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+            
+            }
+    .display-2{align-self: self-end;
+                 color:rgb(58, 58, 58);
+                padding-right: 10px;
+                 font-family: 'sans-serif';
+                 margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;}
+    
+    .col{
+         padding: 25px 38px;
+         font-size: 35px;
+         font-weight: bolder;
+         margin:0px;
+         color:white;
+         background-color: black;
+          cursor: pointer;
+          border: 0.1px solid rgb(0, 137, 137);
+          border-radius: 5px;
+          margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        }
+    #full-stop{ 
+        padding-right: 47px;
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+              }
+    .ac{
+       font-size: 31px;
+       background-color: #07a7a7;
+       cursor: pointer;
+       border-radius: 5px;
+       margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        padding: 0px 76px;
+        text-align: center;
+        padding-top: 25px;
+       }
+    .ac:hover{
+        background-color: red;
+        border: 1px solid black;
+
+    }
+    #minus{
+        padding-right:40px ;
+        background-color: rgb(134, 134, 134);
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        }
+    #divsion{
+        padding-right:42px ;
+        background-color: rgb(134, 134, 134);
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+    }
+    #multi{
+        padding-right:32px ;
+        background-color: rgb(134, 134, 134);
+        font-weight: lighter;
+        font-size: 27px;
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        }
+    #equal{font-size: 60px;
+           padding-top: 3px;
+           padding-right:83px ;
+           padding-left:74px ;
+          background-color: rgb(71, 71, 71);
+          border-radius: 5px;
+          margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        text-align: center;
+        }
+    #plus{ padding-right: 32px;
+        background-color: rgb(134, 134, 134);
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+    }
+.col:hover{color:whitesmoke;
+          border: 2px solid red;
+          background-color: teal;
+        }
+          
+#del{
+        font-size: 35px;
+        padding-left: 26px; 
+        padding-right: 26px;
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+     }
+#left{padding-right: 40px;
+    margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;}
+#right{padding-right: 40px;
+    margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;}
+#n-00{
+    font-size: 40px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+#mod{
+    padding-right:40px ;
+        background-color: rgb(134, 134, 134);
+        border-radius: 5px;
+        padding: 20px 29px;
+        margin-top: 2px;
+        font-size: xx-large;
+        color: white;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        font: center;
+}
+#pow{
+    padding-right:40px ;
+        background-color: rgb(134, 134, 134);
+        border-radius: 5px;
+        padding: 20px 16px;
+        margin-top: 2px;
+        font-size: xx-large;
+        color: white;
+        margin-top: 2px;
+        margin-left:5px ;
+        margin-bottom:2px ;
+        margin-right: 5px;
+        font: center;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="display">
+                <div class="display-1"></div>
+                <div class="display-2"></div>
+            </div>
+            
+        </div>
+        
+            
+        <div class="bottom">
+            <div class="row">
+                <div class="col" id="del">del</div>
+                <div class="col" id="left">(</div>
+                <div class="col" id="right">)</div>
+                <div class="ac" id="ac">AC</div>
+            </div>
+            <div class="row">
+                <div class="col" id="n-7" >7</div>
+                <div class="col" id="n-8">8</div>
+                <div class="col" id="n-9">9</div>
+                <div class="col"  id="plus">+</div>
+                <div class="col" id="pow">pow</div>
+                
+            </div>
+            <div class="row">
+                <div class="col" id="n-4">4</div>
+                <div class="col" id="n-5">5</div>
+                <div class="col" id="n-6">6</div>
+                <div class="col" id="minus">-</div>
+                <div class="col" id="mod">%</div>
+            </div>
+            <div class="row">
+                <div class="col" id="n-1">1</div>
+                <div class="col" id="n-2">2</div>
+                <div class="col" id="n-3">3</div>
+                <div class="col" id="divsion">/</div>
+                <div class="col" id="multi">X</div>
+            </div>
+            <div class="row">
+                
+                <div class="col" id="n-0">0</div>
+                <div class="col" id="n-00">0 0</div>
+                <div class="col" id="full-stop">.</div>
+                
+                <div class="col" id="equal">=</div>
+                
+            </div>
+        </div> 
+    </div>
+   
+</body>
+<script>
+    let display=document.getElementsByClassName("display-1")[0]
+let display_2=document.getElementsByClassName("display-2")[0]
+document.getElementById("n-7").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+7}))
+document.getElementById("n-8").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+8}))
+document.getElementById("n-9").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+9}))
+document.getElementById("n-6").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+6}))
+document.getElementById("n-5").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+5}))
+document.getElementById("n-4").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+4}))
+document.getElementById("n-3").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+3}))
+document.getElementById("n-2").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+2}))
+document.getElementById("n-1").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+1}))
+document.getElementById("n-0").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+0}))
+document.getElementById("plus").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'+'}))
+document.getElementById("minus").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'-'}))
+document.getElementById("multi").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'x'}))
+document.getElementById("divsion").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'/'}))
+document.getElementById("full-stop").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'.'}))
+document.getElementById("left").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'('}))
+document.getElementById("right").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+')'}))
+document.getElementById("pow").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'^'}))
+document.getElementById("mod").addEventListener("click",(()=>{display.innerHTML=display.innerHTML+'%'}))
+document.getElementById("del").addEventListener("click",(()=>{display.innerHTML=display.innerHTML.slice(0,display.innerHTML.length-1)}))
+document.getElementsByClassName("ac")[0].addEventListener("click",(()=>{display.innerHTML=''; display_2.innerHTML=''}))
+function parse(str) {
+        return Function(`'use strict'; return (${str})`)()
+      }     
+ans=()=>{display_2.innerHTML=display.innerHTML
+s=display.innerHTML.replaceAll("x","*");    
+try{let a=parse(s);display.innerHTML=a
+if(display.innerHTML.includes(".")){display.innerHTML=display.innerHTML.slice(0,display.innerHTML.indexOf('.')+16)}}catch(error){display_2.innerHTML="ERROR";display.innerHTML=''}
+}  
+document.getElementById("equal").setAttribute("onclick","ans()")
+
+</script>
+</html>
